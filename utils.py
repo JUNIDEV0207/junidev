@@ -59,14 +59,14 @@ async def save_poster(imdb_id, title, year, url):
             poster=url
         )
     except ValidationError:
-        logger.exception('Faylni Bazaga Saqlashda Xatolik Yuz Berdi⛔️')
+        logger.exception('Kitobni Bazaga Saqlashda Xatolik Yuz Berdi⛔️')
     else:
         try:
             await data.commit()
         except DuplicateKeyError:
-            logger.warning("Fayl Bazada Mavjud😉")
+            logger.warning("Bu kitob Bazada Mavjud😉")
         else:
-            logger.info("Fayl Bazaga Saqlandi✅")
+            logger.info("Kitob Bazaga Saqlandi✅")
 
 async def save_file(media):
     """Save file in database"""
@@ -85,14 +85,14 @@ async def save_file(media):
             caption=media.caption.html if media.caption else None,
         )
     except ValidationError:
-        logger.exception('Faylni Bazaga Saqlashda Xatolik Yuz Berdi⛔️')
+        logger.exception('Kitobni Bazaga Saqlashda Xatolik Yuz Berdi⛔️')
     else:
         try:
             await file.commit()
         except DuplicateKeyError:
-            logger.warning(media.file_name + " Fayl Bazada Mavjud😉")
+            logger.warning(media.file_name + " Kitob Bazada Mavjud😉")
         else:
-            logger.info(media.file_name + " Fayl Bazaga Saqlandi✅")
+            logger.info(media.file_name + " Kitob Bazaga Saqlandi✅")
 
 
 async def get_search_results(query, file_type=None, max_results=10, offset=0):
