@@ -53,7 +53,7 @@ Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!**",
             "description": "Welcome message for start command",
             "value": "**Salom Men MegaFind bot, Bu yerda siz Kitoblarni Inline rejimida qidirishingiz mumkin,
 Kitoblarni qidirish uchun quyidagi tugmalardan foydalaning yoki 
-Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!**.",
+Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!**",
             "required": false
         },
         "USE_CAPTION_FILTER": {
