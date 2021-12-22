@@ -1,6 +1,8 @@
 {
-    "name": "Media Search bot",
-    "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
+    "name": "MegaFind bot",
+    "description": "Bu yerda siz Kitoblarni Inline rejimida qidirishingiz mumkin,
+Kitoblarni qidirish uchun quyidagi tugmalardan foydalaning yoki 
+Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!",
     "keywords": [
       "telegram",
       "auto-filter",
@@ -14,8 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/subinps/Media-Search-bot",
-    "repository": "https://github.com/subinps/Media-Search-bot",
+    "Admin": "https://t.me/Gofurjonovvv",
+    "Yordam": "https://t.me/megafindofficial",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
@@ -49,7 +51,9 @@
         },
         "START_MSG": {
             "description": "Welcome message for start command",
-            "value": "**Hi, I'm [Media Search Bot](https://github.com/subinps/Media-Search-bot) or you can call me as Auto-Filter Bot**\n\nHere you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.",
+            "value": "**Salom Men MegaFind bot, Bu yerda siz Kitoblarni Inline rejimida qidirishingiz mumkin,
+Kitoblarni qidirish uchun quyidagi tugmalardan foydalaning yoki 
+Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!**.",
             "required": false
         },
         "USE_CAPTION_FILTER": {
