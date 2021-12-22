@@ -26,11 +26,11 @@ async def filter(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="**Please Join My Updates Channel to use this Bot!**",
+                text="**Iltimoss, Bot haqida yangiliklarni bilish uchun quyidagi kanalga azo bo'ling!**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                            InlineKeyboardButton("🤖 Kanalga Qo'shiling ", url=invite_link.invite_link)
                         ]
                     ]
                 ),
@@ -83,20 +83,20 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Sizning So'rovingiz Malumotlar Bazasida Topildi >>> {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Sizning So'rovingiz Malumotlar Bazasida Topildi >>> {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
         buttons = data['buttons'][0].copy()
 
         buttons.append(
-            [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
+            [InlineKeyboardButton(text="Keyingi ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📃 Natija 1/{data['total']}",callback_data="pages")]
         )
         if BUTTON:
             buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
@@ -106,7 +106,7 @@ async def filter(client, message):
         if poster:
             await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Sizning So'rovingiz Malumotlar Bazasida Topildi >>> {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -143,37 +143,37 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="📃 Natija 1/1",callback_data="pages")]
             )
             if BUTTON:
-                buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                buttons.append([InlineKeyboardButton(text="Yopish ❌",callback_data="close")])
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Sizning So'rovingiz Malumotlar Bazasida Topildi >>> {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Sizning So'rovingiz Malumotlar Bazasida Topildi >>> {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
         buttons = data['buttons'][0].copy()
 
         buttons.append(
-            [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
+            [InlineKeyboardButton(text="Keyingi ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📃 Natija 1/{data['total']}",callback_data="pages")]
         )
         if BUTTON:
-            buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+            buttons.append([InlineKeyboardButton(text="Yopish ❌",callback_data="close")])
         poster=None
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Sizning So'rovingiz Malumotlar Bazasida Topildi >>> {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Sizning So'rovingiz Malumotlar Bazasida Topildi >>> {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
@@ -208,20 +208,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("You are using this for one of my old message, please send the request again.",show_alert=True)
+                await query.answer("So'rovda Xatolik, Iltimos So'rovni qayta yuboring",show_alert=True)
                 return
 
             if int(index) == int(data["total"]) - 2:
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ Orqaga", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Natija {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
                 if BUTTON:
-                    buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                    buttons.append([InlineKeyboardButton(text="Yopish ❌",callback_data="close")])
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -231,13 +231,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ Orqaga", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Natija {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
                 if BUTTON:
-                    buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                    buttons.append([InlineKeyboardButton(text="Yopish ❌",callback_data="close")])
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -250,20 +250,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("You are using this for one of my old message, please send the request again.",show_alert=True)
+                await query.answer("So'rovda Xatolik, Iltimos So'rovni qayta yuboring.",show_alert=True)
                 return
 
             if int(index) == 1:
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("Keyingi ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Natija {int(index)}/{data['total']}", callback_data="pages")]
                 )
                 if BUTTON:
-                    buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                    buttons.append([InlineKeyboardButton(text="Yopish ❌",callback_data="close")])
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -273,26 +273,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ Orqaga", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Natija {int(index)}/{data['total']}", callback_data="pages")]
                 )
                 if BUTTON:
-                    buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                    buttons.append([InlineKeyboardButton(text="Yopish ❌",callback_data="close")])
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
                 return
-        elif query.data == "about":
+        elif query.data == "Haqida":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-                    InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
+                    InlineKeyboardButton('Bot Yangiliklari', url='https://t.me/megafindofficial'),
+                    InlineKeyboardButton('Foydali Kanal', url='https://t.me/foydali_information1')
                 ]
                 ]
-            await query.message.edit(text="Source Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="Foydali Kanal : <a href='https://t.me/foydali_information1'>Click here</a>\nBot Yangilikari : <a href='https://t.me/megafindofficial'>Useful</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
 
@@ -313,8 +313,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        InlineKeyboardButton('Foydali', url='https://t.me/foydali_information1'),
+                        InlineKeyboardButton('Bot Yangiliklari, url='https://t.me/megafindofficial')
                     ]
                     ]
                 
@@ -327,7 +327,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒",show_alert=True)
+                await query.answer("Haddan Tashqarr Aqlli Bo'lmang😒",show_alert=True)
                 return
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
@@ -345,8 +345,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        InlineKeyboardButton('Foydali', url='https://t.me/foydali_information1'),
+                        InlineKeyboardButton('Bot Yangiliklari, url='https://t.me/megafindofficial')
                     ]
                     ]
                 
