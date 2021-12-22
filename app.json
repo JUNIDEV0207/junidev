@@ -1,8 +1,8 @@
 {
     "name": "MegaFind bot",
-    "description": "Bu yerda siz Kitoblarni Inline rejimida qidirishingiz mumkin,
+    "description": Bu yerda siz Kitoblarni Inline rejimida qidirishingiz mumkin,
 Kitoblarni qidirish uchun quyidagi tugmalardan foydalaning yoki 
-Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!",
+Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!,
     "keywords": [
       "telegram",
       "auto-filter",
