@@ -1,5 +1,5 @@
 # Bot information
-SESSION = 'Media_search'
+SESSION = 'Mega Find'
 USER_SESSION = 'User_Bot'
 API_ID = 12345
 API_HASH = '0123456789abcdef0123456789abcdef'
@@ -23,10 +23,12 @@ COLLECTION_NAME = 'channel_files'  # If you are using the same database, then us
 
 # Messages
 START_MSG = """
-**Hi, I'm Media Search bot**
+**Salom, Men MegaFind bot!/nHi I am MegaFind bot!/nПривет Я бот MegaFind!**
 
-Here you can search files in inline mode. Just press follwing buttons and start searching.
+Bu yerda siz Kitoblarni Inline rejimida qidirishingiz mumkin,
+Kitoblarni qidirish uchun quyidagi tugmalardan foydalaning yoki 
+Menga qidirmoqchi bo'lgan kitobingizni nomini jo'nating!
 """
 
 SHARE_BUTTON_TEXT = 'Checkout {username} for searching files'
-INVITE_MSG = 'Please join @.... to use this bot'
+INVITE_MSG = 'Iltimos botdan foydalanish uchun @..... kanaliga qo'shiling!'
